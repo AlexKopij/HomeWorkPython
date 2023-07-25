@@ -24,7 +24,7 @@ def find_data() -> None:
 def search(book: str, info: str) -> str:
     """Находит в списке записи по определенному критерию поиска"""
     book = book.split('\n')
-    for contact in range(len(book)):
-        if info in contact:
+    for contact in book:
+        if info in contact.split():
             return contact
     return 'Совпадений не найдено'
